@@ -1,0 +1,155 @@
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(51, 215, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 38px rgba(51, 215, 255, 0.22);
+  }
+}
+
+@keyframes shimmerLine {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 108%;
+  }
+}
+
+@keyframes auroraDrift {
+  0% {
+    transform: translate3d(-5%, -4%, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(5%, 3%, 0) rotate(8deg);
+  }
+  100% {
+    transform: translate3d(-3%, 6%, 0) rotate(-6deg);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes railDash {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 90px 0;
+  }
+}
+
+@keyframes popSelect {
+  0% {
+    transform: scale(0.92);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-section {
+  animation: slowZoom 18s ease-in-out alternate infinite;
+}
+
+.hero-content h1,
+.hero-content .lead,
+.hero-content .eyebrow,
+.search-panel,
+.page-heading,
+.glass-card {
+  animation: floatIn 0.75s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+.hero-content .lead {
+  animation-delay: 0.12s;
+}
+
+.search-panel {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(1),
+.destination-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.feature-card:nth-child(2),
+.destination-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.feature-card:nth-child(3),
+.destination-card:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease), filter 0.65s ease;
+  filter: blur(8px);
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.page-shell,
+main {
+  animation: floatIn 0.5s var(--ease) both;
+}
+
+#typedText {
+  color: var(--accent);
+  text-shadow: 0 0 24px rgba(51, 215, 255, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

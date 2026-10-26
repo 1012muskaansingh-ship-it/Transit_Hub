@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | TransitHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3"><link rel="stylesheet" href="css/animations.css?v=3"><link rel="stylesheet" href="css/responsive.css?v=3">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-nav"><div class="container"><a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-train-front"></i> TransitHub</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="search.html">Search</a></li><li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="chatbot.html">AI Assistant</a></li></ul></div></div></nav>
+  <main class="page-shell"><div class="container"><div class="page-heading"><p class="eyebrow">User Dashboard</p><h1>Bookings, profile, and saved trips</h1></div><div class="row g-4"><aside class="col-lg-4"><div class="glass-card profile-card"><i class="bi bi-person-circle"></i><h2>TransitHub User</h2><p>Saved traveler profile</p></div><div class="glass-card mt-4"><h3 class="h5">Saved Destinations</h3><div class="saved-tags"><span>Delhi</span><span>Jaipur</span><span>Mumbai</span><span>Goa</span></div></div></aside><section class="col-lg-8"><div class="glass-card"><div class="d-flex justify-content-between align-items-center mb-3"><h2 class="h5 mb-0">Booking History</h2><button class="btn btn-sm btn-outline-light" id="clearHistory">Clear</button></div><div id="bookingHistory"></div></div></section></div></div></main>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast"><div class="toast-body"></div></div></div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="js/storage.js?v=3"></script><script src="js/app.js?v=4"></script><script src="js/dashboard.js?v=3"></script>
+</body>
+</html>
